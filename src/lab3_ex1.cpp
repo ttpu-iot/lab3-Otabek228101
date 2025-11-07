@@ -19,8 +19,8 @@ const int MQTT_PORT = 1883;
 const char *MQTT_USERNAME = "userTTPU";
 const char *MQTT_PASSWORD = "mqttpass";
 
-const char *TOPIC_LIGHT = "ttpu/iot/userTTPU/sensors/light";
-const char *TOPIC_BUTTON = "ttpu/iot/userTTPU/events/button";
+const char *TOPIC_LIGHT = "ttpu/iot/otabek/sensors/light";
+const char *TOPIC_BUTTON = "ttpu/iot/otabek/events/button";
 
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
@@ -59,7 +59,6 @@ void setup()
 
   connectToWifi();
 
-  // Simple time sync for timestamps
   Serial.println("Configuring NTP...");
   configTime(0, 0, "pool.ntp.org");
 
@@ -67,9 +66,6 @@ void setup()
   connectToMqtt();
 }
 
-/*************************
- * LOOP
- */
 void loop()
 {
   if (WiFi.status() != WL_CONNECTED)
@@ -95,10 +91,6 @@ void loop()
 
   checkButtonEvents();
 }
-
-/*************************
- * HELPERS
- */
 
 void connectToWifi()
 {
