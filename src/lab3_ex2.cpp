@@ -16,10 +16,10 @@ const int MQTT_PORT = 1883;
 const char *MQTT_USERNAME = "userTTPU";
 const char *MQTT_PASSWORD = "mqttpass";
 
-const char *TOPIC_LED_RED = "ttpu/iot/userTTPU/led/red";
-const char *TOPIC_LED_GREEN = "ttpu/iot/userTTPU/led/green";
-const char *TOPIC_LED_BLUE = "ttpu/iot/userTTPU/led/blue";
-const char *TOPIC_LED_YELLOW = "ttpu/iot/userTTPU/led/yellow";
+const char *TOPIC_LED_RED = "ttpu/iot/otabek/led/red";
+const char *TOPIC_LED_GREEN = "ttpu/iot/otabek/led/green";
+const char *TOPIC_LED_BLUE = "ttpu/iot/otabek/led/blue";
+const char *TOPIC_LED_YELLOW = "ttpu/iot/otabek/led/yellow";
 
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
